@@ -10,35 +10,19 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import SendIcon from "@mui/icons-material/Send";
 import Divider from "@mui/material/Divider";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import axios from "axios";
+
+import { usePricingContext } from "./PricingContextProvider";
 
 const DEFAULT_AGE = 25;
 
-const PricingForm = ({ handlePricingResult, reset }) => {
-  const [price, setPrice] = useState(0);
+const PricingForm = () => {
   const [age, setAge] = useState(DEFAULT_AGE);
   const [priorIncidents, setPriorIncidents] = useState(false);
 
+  const { getPricingResult, reset, price } = usePricingContext();
+
   const handleSwitchChange = (event) => {
     setPriorIncidents(event.target.checked);
-  };
-
-  const getPrice = async () => {
-    //Make call and update price
-    const url = "http://localhost:8080/pricing";
-
-    const payload = {
-      Age: parseInt(age),
-      "Previous incidents?": priorIncidents,
-    };
-    try {
-      const { data } = await axios.post(url, payload);
-      console.log("Price Updated");
-      setPrice(data.Base_Price);
-      handlePricingResult(age, priorIncidents, data.Base_Price);
-    } catch (error) {
-      console.log(error.response);
-    }
   };
 
   return (
@@ -65,7 +49,7 @@ const PricingForm = ({ handlePricingResult, reset }) => {
           <Divider />
           <Button
             variant="contained"
-            onClick={getPrice}
+            onClick={() => getPricingResult(age, priorIncidents)}
             endIcon={<SendIcon />}
             sx={{ mt: 5, mb: 5 }}
           >
@@ -73,8 +57,8 @@ const PricingForm = ({ handlePricingResult, reset }) => {
           </Button>
           <Button
             variant="contained"
-            onClick={reset}
             color="secondary"
+            onClick={reset}
             endIcon={<RestartAltIcon />}
             sx={{ ml: 5, mt: 5, mb: 5 }}
           >
