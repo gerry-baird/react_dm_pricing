@@ -14,7 +14,7 @@ import axios from "axios";
 
 const DEFAULT_AGE = 25;
 
-const Pricing = ({ handlePricingResult }) => {
+const PricingForm = ({ handlePricingResult, reset }) => {
   const [price, setPrice] = useState(0);
   const [age, setAge] = useState(DEFAULT_AGE);
   const [priorIncidents, setPriorIncidents] = useState(false);
@@ -42,7 +42,7 @@ const Pricing = ({ handlePricingResult }) => {
   };
 
   return (
-    <Box flex={4} p={2}>
+    <Box flex={9} p={2}>
       <Box position="sticky">
         <Card sx={{ ml: 5, p: 5 }}>
           <Typography variant="h6" gutterBottom>
@@ -73,7 +73,7 @@ const Pricing = ({ handlePricingResult }) => {
           </Button>
           <Button
             variant="contained"
-            onClick={getPrice}
+            onClick={reset}
             color="secondary"
             endIcon={<RestartAltIcon />}
             sx={{ ml: 5, mt: 5, mb: 5 }}
@@ -93,4 +93,4 @@ const Pricing = ({ handlePricingResult }) => {
   );
 };
 
-export default Pricing;
+export default PricingForm;

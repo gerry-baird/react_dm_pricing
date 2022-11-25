@@ -27,7 +27,7 @@ export default function MyAppBar() {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          IBM Business Automation Manager - Open Edition
+          IBM BAMOE : DM Demo UI
         </Typography>
 
         <Button color="inherit" onClick={(e) => setMenuOpen(true)}>

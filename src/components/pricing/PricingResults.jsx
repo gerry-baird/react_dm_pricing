@@ -14,14 +14,13 @@ import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 
-const Rightbar = ({ results, deleteResult }) => {
+const PricingResults = ({ results, deleteResult }) => {
   return (
-    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Stack>
         <Typography color="primary" variant="subtitle1">
           Results...
         </Typography>
-
         {results.map((result, index) => {
           return (
             <Card key={index} sx={{ mb: 2 }}>
@@ -51,4 +50,4 @@ const Rightbar = ({ results, deleteResult }) => {
   );
 };
 
-export default Rightbar;
+export default PricingResults;
