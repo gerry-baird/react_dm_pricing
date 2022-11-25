@@ -3,7 +3,7 @@ import axios from "axios";
 
 const PricingContext = React.createContext();
 
-const PricingContextProvider = (props) => {
+const PricingProvider = (props) => {
   const children = props.children;
   const [results, setResults] = React.useState([]);
   const [price, setPrice] = useState(0);
@@ -69,4 +69,4 @@ export const usePricingContext = () => {
   return useContext(PricingContext);
 };
 
-export { PricingContextProvider };
+export { PricingProvider };

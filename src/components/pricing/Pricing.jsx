@@ -1,14 +1,14 @@
 import React from "react";
-import { PricingContextProvider } from "./PricingContextProvider";
+import { PricingProvider } from "./Context";
 import PricingForm from "./PricingForm";
 import PricingResults from "./PricingResults";
 
 const Pricing = () => {
   return (
-    <PricingContextProvider>
+    <PricingProvider>
       <PricingForm />
       <PricingResults />
-    </PricingContextProvider>
+    </PricingProvider>
   );
 };
 
