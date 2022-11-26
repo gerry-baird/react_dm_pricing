@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 import {
   AppBar,
+  Box,
   styled,
   Toolbar,
   Typography,
   Menu,
   MenuItem,
 } from "@mui/material";
-
+import HelpCenterIcon from "@mui/icons-material/HelpCenter";
+import SettingsIcon from "@mui/icons-material/Settings";
 import Button from "@mui/material/Button";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
 });
+
+const Icons = styled(Box)(({ theme }) => ({
+  display: "none",
+  alignItems: "center",
+  gap: "20px",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex",
+  },
+}));
 
 export default function MyAppBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,12 +38,16 @@ export default function MyAppBar() {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          IBM BAMOE : DM Demo UI
+          DM Demo UI
         </Typography>
 
         <Button color="inherit" onClick={(e) => setMenuOpen(true)}>
           Links
         </Button>
+        <Icons>
+          <SettingsIcon fontSize="large" />
+          <HelpCenterIcon fontSize="large" />
+        </Icons>
       </StyledToolbar>
       <Menu
         id="demo-positioned-menu"
