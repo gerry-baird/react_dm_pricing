@@ -18,11 +18,31 @@ const DEFAULT_AGE = 25;
 const PricingForm = () => {
   const [age, setAge] = useState(DEFAULT_AGE);
   const [priorIncidents, setPriorIncidents] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const { getPricingResult, reset, price } = usePricingContext();
 
   const handleSwitchChange = (event) => {
     setPriorIncidents(event.target.checked);
+  };
+
+  const validate = () => {
+    let temp = {};
+
+    if (age < 16 || age > 120) {
+      temp.age = "Age must be between 16 and 120";
+    }
+
+    setErrors({ ...temp });
+
+    //check every element in temp, to decide if validaiton was passed
+    return Object.values(temp).every((x) => x === "");
+  };
+
+  const handleSubmit = (e) => {
+    if (validate()) {
+      getPricingResult(age, priorIncidents);
+    }
   };
 
   return (
@@ -34,11 +54,14 @@ const PricingForm = () => {
           </Typography>
           <TextField
             label="Age"
+            name="age"
             variant="outlined"
             defaultValue={DEFAULT_AGE}
             fullWidth
             sx={{ mt: 1, mb: 1 }}
             onChange={(e) => setAge(e.target.value)}
+            error={errors.age !== undefined && errors.age.length > 0}
+            helperText={errors.age}
           />
           <FormGroup>
             <FormControlLabel
@@ -49,7 +72,7 @@ const PricingForm = () => {
           <Divider />
           <Button
             variant="contained"
-            onClick={() => getPricingResult(age, priorIncidents)}
+            onClick={() => handleSubmit()}
             endIcon={<SendIcon />}
             sx={{ mt: 5, mb: 5 }}
           >
