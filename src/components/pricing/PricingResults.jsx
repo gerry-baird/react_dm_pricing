@@ -11,9 +11,6 @@ const PricingResults = () => {
   return (
     <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Stack>
-        <Typography color="primary" variant="subtitle1">
-          Results...
-        </Typography>
         {results.map((result, index) => {
           return (
             <Card key={index} sx={{ mb: 2 }}>
@@ -23,7 +20,7 @@ const PricingResults = () => {
                     <DeleteIcon />
                   </IconButton>
                 }
-                title="Pricing"
+                //title="Pricing"
                 subheader={result.currentTime}
               />
               <CardContent>
@@ -31,7 +28,7 @@ const PricingResults = () => {
                 <Typography variant="body2">
                   Prior : {result.prior ? "Yes" : "No"}
                 </Typography>
-                <Typography variant="body1" color="red">
+                <Typography variant="body1" color="green">
                   Price : {result.price}
                 </Typography>
               </CardContent>
