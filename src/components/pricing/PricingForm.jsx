@@ -11,7 +11,7 @@ import SendIcon from "@mui/icons-material/Send";
 import Divider from "@mui/material/Divider";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
-import { usePricingContext } from "./Context";
+import { usePricingContext } from "../../context/PricingContext";
 
 const DEFAULT_AGE = 25;
 

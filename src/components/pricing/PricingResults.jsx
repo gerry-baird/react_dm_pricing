@@ -3,7 +3,7 @@ import { Stack } from "@mui/system";
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
-import { usePricingContext } from "./Context";
+import { usePricingContext } from "../../context/PricingContext";
 
 const PricingResults = () => {
   const { results, deleteResult } = usePricingContext();

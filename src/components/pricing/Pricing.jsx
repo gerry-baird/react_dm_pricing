@@ -1,5 +1,5 @@
 import React from "react";
-import { PricingProvider } from "./Context";
+import { PricingProvider } from "../../context/PricingContext";
 import PricingForm from "./PricingForm";
 import PricingResults from "./PricingResults";
 
