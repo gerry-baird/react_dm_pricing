@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
+import { useAppContext } from "./AppContext";
 
 const PricingContext = React.createContext();
 
@@ -7,10 +8,11 @@ const PricingProvider = (props) => {
   const children = props.children;
   const [results, setResults] = React.useState([]);
   const [price, setPrice] = useState(0);
+  const { pricingURL } = useAppContext();
 
   const getPricingResult = async (age, priorIncidents) => {
     //Make call and update price
-    const url = "http://localhost:8080/pricing";
+    const url = pricingURL;
 
     const payload = {
       Age: parseInt(age),
@@ -18,7 +20,6 @@ const PricingProvider = (props) => {
     };
     try {
       const { data } = await axios.post(url, payload);
-      console.log("Price Updated");
       setPrice(data.Base_Price);
       addPricingResult(age, priorIncidents, data.Base_Price);
     } catch (error) {

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   List,
@@ -12,12 +13,17 @@ import FlightIcon from "@mui/icons-material/Flight";
 import SellIcon from "@mui/icons-material/Sell";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const handleRouteClick = (route) => {
+    navigate(route);
+  };
+
   return (
     <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
         <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/">
+            <ListItemButton onClick={() => handleRouteClick("/")}>
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
@@ -25,7 +31,7 @@ const Sidebar = () => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/pricing">
+            <ListItemButton onClick={() => handleRouteClick("/pricing")}>
               <ListItemIcon>
                 <SellIcon />
               </ListItemIcon>
@@ -33,7 +39,7 @@ const Sidebar = () => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
+            <ListItemButton onClick={() => handleRouteClick("/loans")}>
               <ListItemIcon>
                 <Group />
               </ListItemIcon>
@@ -41,7 +47,7 @@ const Sidebar = () => {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
+            <ListItemButton onClick={() => handleRouteClick("/vacation")}>
               <ListItemIcon>
                 <FlightIcon />
               </ListItemIcon>

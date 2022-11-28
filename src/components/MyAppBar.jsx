@@ -9,8 +9,6 @@ import {
   MenuItem,
 } from "@mui/material";
 import HelpCenterIcon from "@mui/icons-material/HelpCenter";
-import SettingsIcon from "@mui/icons-material/Settings";
-import Button from "@mui/material/Button";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -41,12 +39,11 @@ export default function MyAppBar() {
           DM Demo UI
         </Typography>
 
-        <Button color="inherit" onClick={(e) => setMenuOpen(true)}>
+        {/* <Button color="inherit" onClick={(e) => setMenuOpen(true)}>
           Links
-        </Button>
+        </Button> */}
         <Icons>
-          <SettingsIcon fontSize="large" />
-          <HelpCenterIcon fontSize="large" />
+          <HelpCenterIcon fontSize="large" onClick={(e) => setMenuOpen(true)} />
         </Icons>
       </StyledToolbar>
       <Menu

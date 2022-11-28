@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Card, Paper } from "@mui/material";
-import { Box } from "@mui/material";
+
+import { Box, Paper } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Switch from "@mui/material/Switch";
 import Button from "@mui/material/Button";
@@ -12,6 +12,7 @@ import Divider from "@mui/material/Divider";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
 import { usePricingContext } from "../../context/PricingContext";
+import { useAppContext } from "../../context/AppContext";
 
 const DEFAULT_AGE = 25;
 
@@ -21,6 +22,7 @@ const PricingForm = () => {
   const [errors, setErrors] = useState({});
 
   const { getPricingResult, reset, price } = usePricingContext();
+  const { pricingURL } = useAppContext();
 
   const handleSwitchChange = (event) => {
     setPriorIncidents(event.target.checked);

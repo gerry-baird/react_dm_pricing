@@ -1,19 +1,16 @@
 import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
+import ConfigPanel from "./config/ConfigPanel";
 
 const Home = () => {
   return (
-    <Box flex={7} p={2}>
-      <Paper sx={{ mt: 2, p: 2 }} elevation={4} variant="outlined">
-        <Typography variant="h6">Some useful informaiton here </Typography>
-        <Typography variant="body1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          omnis quis tempora culpa veritatis aliquam dolores. Quasi voluptas
-          odio, excepturi sit officiis odit alias commodi quidem? Omnis aperiam
-          inventore quae corporis ex numquam, quo fuga ab pariatur facilis
-          accusantium, sint provident illo quos esse in vero nihil rem doloribus
-          ad?{" "}
+    <Box flex={9} p={2}>
+      <Paper sx={{ mt: 2, p: 2 }} elevation={4}>
+        <Typography variant="h6">Endpoint Configuration</Typography>
+        <Typography variant="body1" sx={{ mb: 3 }}>
+          Use these setting to configure your API endpoints.{" "}
         </Typography>
+        <ConfigPanel />
       </Paper>
     </Box>
   );
