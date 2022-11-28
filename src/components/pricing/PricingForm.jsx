@@ -12,7 +12,6 @@ import Divider from "@mui/material/Divider";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
 import { usePricingContext } from "../../context/PricingContext";
-import { useAppContext } from "../../context/AppContext";
 
 const DEFAULT_AGE = 25;
 
