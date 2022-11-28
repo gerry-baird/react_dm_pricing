@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card } from "@mui/material";
+import { Card, Paper } from "@mui/material";
 import { Box } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Switch from "@mui/material/Switch";
@@ -48,7 +48,7 @@ const PricingForm = () => {
   return (
     <Box flex={8} p={2}>
       <Box>
-        <Card sx={{ ml: 2, p: 4 }}>
+        <Paper sx={{ ml: 2, p: 4 }}>
           <Typography variant="h6" gutterBottom>
             Pricing Details
           </Typography>
@@ -94,7 +94,7 @@ const PricingForm = () => {
           <Typography variant="subtitle1" sx={{ mt: 2 }}>
             Price : {price}
           </Typography>
-        </Card>
+        </Paper>
       </Box>
     </Box>
   );
