@@ -46,9 +46,9 @@ const PricingForm = () => {
   };
 
   return (
-    <Box flex={9} p={2}>
-      <Box position="sticky">
-        <Card sx={{ ml: 5, p: 5 }}>
+    <Box flex={8} p={2}>
+      <Box>
+        <Card sx={{ ml: 2, p: 4 }}>
           <Typography variant="h6" gutterBottom>
             Pricing Details
           </Typography>
