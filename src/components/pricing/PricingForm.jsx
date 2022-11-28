@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 
-import { Box, Paper } from "@mui/material";
-import TextField from "@mui/material/TextField";
-import Switch from "@mui/material/Switch";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import {
+  Box,
+  Paper,
+  TextField,
+  Switch,
+  Button,
+  Typography,
+  FormGroup,
+  FormControlLabel,
+  Divider,
+} from "@mui/material";
+
 import SendIcon from "@mui/icons-material/Send";
-import Divider from "@mui/material/Divider";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
 import { usePricingContext } from "../../context/PricingContext";
