@@ -22,7 +22,6 @@ const PricingForm = () => {
   const [errors, setErrors] = useState({});
 
   const { getPricingResult, reset, price } = usePricingContext();
-  const { pricingURL } = useAppContext();
 
   const handleSwitchChange = (event) => {
     setPriorIncidents(event.target.checked);
