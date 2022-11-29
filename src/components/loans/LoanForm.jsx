@@ -135,7 +135,7 @@ const LoanForm = () => {
           endIcon={<SendIcon />}
           sx={{ mt: 5, mb: 5 }}
         >
-          Check Applicaiton
+          Check Application
         </Button>
         <Grid container spacing={1}>
           <Grid xs={6}>
