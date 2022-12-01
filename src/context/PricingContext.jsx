@@ -23,7 +23,7 @@ const PricingProvider = (props) => {
       setPrice(data.Base_Price);
       addPricingResult(age, priorIncidents, data.Base_Price);
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
     }
   };
 

@@ -20,7 +20,6 @@ const PricingResults = () => {
                     <DeleteIcon />
                   </IconButton>
                 }
-                //title="Pricing"
                 subheader={result.currentTime}
               />
               <CardContent>
