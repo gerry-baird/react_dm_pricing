@@ -37,7 +37,7 @@ const LoanResults = () => {
                 <Typography variant="body2">
                   Monthly Income : {result.monthlyIncome}
                 </Typography>
-                <Typography variant="body2">-</Typography>
+                <Typography variant="body2">- - - - -</Typography>
                 <Typography variant="body1" color="green">
                   {result.preQualify}
                 </Typography>
