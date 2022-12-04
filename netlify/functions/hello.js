@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 exports.handler = async function (event, context) {
   console.log("Logged from hello function");
   console.debug("Logged from hello function with debug");
