@@ -42,11 +42,11 @@
     "colId": "history",
     "containerId": "",
     "name": "https://zingy-dango-fcc0fb.netlify.app/.netlify/functions/hello",
-    "url": "http://localhost:8888/.netlify/functions/hello",
+    "url": "http://localhost:49157/.netlify/functions/hello",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-12-04T11:54:53.810Z",
-    "modified": "2022-12-04T14:43:04.859Z",
+    "modified": "2022-12-04T14:58:05.504Z",
     "headers": [],
     "params": [],
     "tests": []
