@@ -19,34 +19,15 @@
     "tests": []
   },
   {
-    "_id": "5769841c-0062-41cf-b427-5ec18d516d06",
-    "colId": "history",
-    "containerId": "",
-    "name": "https://zingy-dango-fcc0fb.netlify.app/.netlify/functions/hello",
-    "url": "https://zingy-dango-fcc0fb.netlify.app/.netlify/functions/hello",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-12-04T11:48:53.236Z",
-    "modified": "2022-12-04T11:55:32.355Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{}",
-      "form": []
-    },
-    "tests": []
-  },
-  {
     "_id": "e5eff113-e429-4a13-bca0-106f9afef755",
     "colId": "history",
     "containerId": "",
     "name": "https://zingy-dango-fcc0fb.netlify.app/.netlify/functions/hello",
-    "url": "http://localhost:49157/.netlify/functions/hello",
+    "url": "http://localhost:49332/.netlify/functions/hello",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-12-04T11:54:53.810Z",
-    "modified": "2022-12-04T14:58:05.504Z",
+    "modified": "2022-12-04T15:04:37.567Z",
     "headers": [],
     "params": [],
     "tests": []
